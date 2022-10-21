@@ -38,3 +38,22 @@
     width: 100px;
     height: 100px;
 }
+
+.cartas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.disposicaoCartas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-between;
+    width: 879px;
+    height: 326px;
+    
+
+}
