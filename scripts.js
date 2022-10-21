@@ -16,7 +16,7 @@ function adicionarCartas(){
     const elemento = document.querySelector(".disposicaoCartas")
     for (let indice = 0; indice < numeroCartas; indice ++){
         elemento.innerHTML += `
-        <div class="cartinha"> <img src="./imagens/back.png" class="papagaio"> </div>
+        <li class="cartinha"> <img src="./imagens/back.png" class="papagaio"> </li>
         `;
     }
 }
