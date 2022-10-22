@@ -32,6 +32,21 @@
     background-color: #a7e9af;
     border: 1px solid #99cea8;
     border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+ 
+}
+
+.frente{
+    position: absolute;
+}
+
+.verso{
+    position: absolute;
 }
 
 .papagaio{
@@ -43,6 +58,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    perspective: 1000px;
     
 }
 
@@ -56,4 +73,8 @@
     height: 326px;
     
 
+}
+
+.flipada{
+    transform: rotateY(180deg);
 }
