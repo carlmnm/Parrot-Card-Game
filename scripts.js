@@ -17,10 +17,10 @@ function adicionarCartas(){
     for (let indice = 0; indice < numeroCartas; indice ++){
         elemento.innerHTML += `
         <div class="cartinha" onclick="flip(this)"> 
-            <div class="frente"> 
+            <div class="frente face"> 
                frente
             </div> 
-            <div class="verso"> 
+            <div class="verso face"> 
                 <img src="./imagens/back.png" class="papagaio"> 
             </div> 
         </div>
@@ -30,7 +30,22 @@ function adicionarCartas(){
 
 adicionarCartas()
 
+let cont = 0;
+
 function flip(elemento){
-    elemento.classList.toggle("flipada")
+    elemento.classList.toggle("flipada");
+    cont++;
+
+    if (cont == 2){
+        setTimeout(desflip, 1000)
+
+    }
     
+}
+
+function desflip(){
+    const elemento = document.querySelectorAll('.flipada')
+    for (let i = 0; i < elemento.length; i++){
+        elemento[i].classList.remove('flipada');
+    }
 }

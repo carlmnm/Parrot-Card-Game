@@ -29,9 +29,7 @@
     align-items: center;
     width: 117px;
     height: 146px;
-    background-color: #a7e9af;
-    border: 1px solid #99cea8;
-    border-radius: 5px;
+    
     cursor: pointer;
     position: relative;
 
@@ -41,12 +39,34 @@
  
 }
 
+.face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #a7e9af;
+    border: 1px solid #99cea8;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
 .frente{
     position: absolute;
+    
+}
+
+.flipada .frente{
+    transform: rotateY(-180deg);
+    
+}
+.flipada .verso{
+    transform: rotateY(0deg);
 }
 
 .verso{
     position: absolute;
+    
 }
 
 .papagaio{
@@ -54,14 +74,7 @@
     height: 100px;
 }
 
-.cartas{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    perspective: 1000px;
-    
-}
 
 .disposicaoCartas{
     display: flex;
@@ -71,6 +84,8 @@
     align-items: center;
     width: 879px;
     height: 326px;
+
+    perspective: 1000px;
     
 
 }
