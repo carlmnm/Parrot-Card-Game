@@ -64,6 +64,14 @@
     transform: rotateY(0deg);
 }
 
+.flipadaFixa .frente{
+    transform: rotateY(-180deg);
+}
+
+.flipadaFixa .verso{
+    transform: rotateY(0deg);
+}
+
 .verso{
     position: absolute;
     
@@ -92,4 +100,12 @@
 
 .flipada{
     transform: rotateY(180deg);
+}
+
+.flipadaFixa{
+    transform: rotateY(180deg);
+}
+
+.danca{
+    width: 100px;
 }
