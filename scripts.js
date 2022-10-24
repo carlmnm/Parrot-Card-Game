@@ -65,7 +65,7 @@ adicionarCartas()
 
 let cont = 0;
 let contagem = 0;
-
+let clicks = 0;
 
 
 
@@ -82,7 +82,7 @@ function flip(elemento){
     //const netoSegundo = segundoEle.childNodes[1].classList[1]
    
     cont++;
-
+    clicks++;
 
   
 
@@ -105,6 +105,11 @@ function flip(elemento){
         cont = 0
         
         
+    }
+    const listaFlipados = document.querySelectorAll(".flipadaFixa")
+    if (listaFlipados.length === numeroCartas){
+        const mensagem = "você ganhou em " + clicks*2 + " jogadas!"
+        alert(mensagem)
     }
     
 }
